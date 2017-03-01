@@ -10,7 +10,11 @@ for variant in "${variants[@]}"; do
 
     cp Dockerfile.template "${variant}/Dockerfile"
 
-    sed -i "" "s/%%TAG%%/$tag/g" "${variant}/Dockerfile"
+    if [[ $(uname) == "Darwin" ]]; then
+        sed -i "" "s/%%TAG%%/$tag/g" "${variant}/Dockerfile"
+    else
+        sed -i "s/%%TAG%%/$tag/g" "${variant}/Dockerfile"
+    fi
 
     cp libyjpagent.so "${variant}/"
     cp license-redist.txt "${variant}/"
