@@ -7,8 +7,9 @@ Docker images with Clojure and YourKit.
 These Docker images are based on the Debian versions
 of [official Clojure images][clojure images], `lein` and
 `boot`. Usuage is essentially the same, but these expose port 10000
-for the YourKit agent, and inject the `YOURKIT_AGENT_OPTION`
-environment variable for use with the container.
+for the YourKit agent, and inject the environment variables
+`YOURKIT_AGENT_PATH`, `YOURKIT_AGENT_PORT`, and `YOURKIT_AGENT_OPTION`
+for use in your container.
 
 For example:
 
