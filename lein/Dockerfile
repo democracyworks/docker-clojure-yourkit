@@ -1,4 +1,4 @@
-FROM clojure:lein-2.7.1
+FROM clojure:lein-2.8.1
 MAINTAINER Christopher Shea <chris@democracy.works>
 
 ADD libyjpagent.so /opt/yourkit/libyjpagent.so
